@@ -216,6 +216,16 @@ main {
     box-shadow: 0 0 15px var(--accent-color);
 }
 
+/* Make your cube red and 200 x 200 x 200px */
+.my-cube {
+	width: 200px;
+	height: 200px;
+}
+
+	.my-cube > * {
+		background: red;
+	}
+
 /* Grid for Projects */
 .grid {
     display: grid;
