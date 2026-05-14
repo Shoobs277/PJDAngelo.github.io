@@ -24,7 +24,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: #050814; 
+    background-color: #050814;
 }
 
 /* =========================================
@@ -47,7 +47,7 @@ body {
     height: 200%;
     top: -50%;
     left: -50%;
-    background: 
+    background:
         radial-gradient(circle at 50% 50%, rgba(76, 29, 149, 0.2) 0%, transparent 40%),
         radial-gradient(circle at 80% 20%, rgba(30, 58, 138, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 20% 80%, rgba(153, 27, 27, 0.15) 0%, transparent 40%);
@@ -56,23 +56,30 @@ body {
 }
 
 @keyframes drift {
-    0% { transform: rotate(0deg) scale(1); }
-    100% { transform: rotate(10deg) scale(1.1); }
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(10deg) scale(1.1);
+    }
 }
 
-.stars, .stars2, .stars3 {
+.stars,
+.stars2,
+.stars3 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-        radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 160px 120px, #8052fd, rgba(0,0,0,0));
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 160px 120px, #8052fd, rgba(0, 0, 0, 0));
     background-repeat: repeat;
     background-size: 200px 200px;
     opacity: 0.8;
@@ -93,8 +100,13 @@ body {
 }
 
 @keyframes twinkle {
-    0% { opacity: 0.2; }
-    100% { opacity: 0.8; }
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
 }
 
 /* =========================================
@@ -230,7 +242,8 @@ main {
     overflow: hidden;
 }
 
-.card:hover, .card:active {
+.card:hover,
+.card:active {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.4), inset 0 0 15px rgba(0, 243, 255, 0.1);
     border-color: var(--accent-color);
@@ -279,7 +292,8 @@ main {
     overflow: hidden;
 }
 
-.blog-post:hover, .blog-post:active {
+.blog-post:hover,
+.blog-post:active {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.4), inset 0 0 15px rgba(0, 243, 255, 0.1);
     border-color: var(--accent-color);
@@ -325,9 +339,9 @@ footer {
    ========================================= */
 .contact-form-container {
     max-width: 500px;
-    margin: 0 auto 30px auto; 
+    margin: 0 auto 30px auto;
     padding: 30px;
-    text-align: left; 
+    text-align: left;
 }
 
 .contact-form-container h3 {
@@ -362,7 +376,8 @@ footer {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: rgba(139, 155, 180, 0.5); /* Faded secondary text */
+    color: rgba(139, 155, 180, 0.5);
+    /* Faded secondary text */
 }
 
 .form-group input:focus,
@@ -383,53 +398,73 @@ footer {
 /* =========================================
    Hologram Effects (Star Wars Style)
    ========================================= */
-.card::before, .blog-post::before {
+.card::before,
+.blog-post::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(0, 243, 255, 0.15) 3px,
-        rgba(0, 243, 255, 0.15) 4px
-    );
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 243, 255, 0.15) 3px,
+            rgba(0, 243, 255, 0.15) 4px);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
     z-index: 1;
 }
 
-.card::after, .blog-post::after {
+.card::after,
+.blog-post::after {
     content: "";
     position: absolute;
-    top: -100%; left: 0; width: 100%; height: 20%;
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgba(0, 243, 255, 0.4),
-        transparent
-    );
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom,
+            transparent,
+            rgba(0, 243, 255, 0.4),
+            transparent);
     opacity: 0;
     pointer-events: none;
     z-index: 2;
 }
 
-.card:hover::before, .card:active::before, .blog-post:hover::before, .blog-post:active::before {
+.card:hover::before,
+.card:active::before,
+.blog-post:hover::before,
+.blog-post:active::before {
     opacity: 1;
 }
 
-.card:hover::after, .card:active::after, .blog-post:hover::after, .blog-post:active::after {
+.card:hover::after,
+.card:active::after,
+.blog-post:hover::after,
+.blog-post:active::after {
     opacity: 1;
     animation: hologramScan 2s linear infinite;
 }
 
 @keyframes hologramScan {
-    0% { top: -100%; }
-    100% { top: 100%; }
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 100%;
+    }
 }
 
 @keyframes hologramFlicker {
-    0% { opacity: 0.95; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0.95;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
